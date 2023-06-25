@@ -39,7 +39,7 @@ This line in particular caught my eye- i have renamed the variables in the scree
 
 The C code is again a little confused but the assembly we can see pretty clearly it seems to load the password here
 and then edit a letter!
-´byte ptr [RAX + local_77],0x61´ -- in this case 0x61 is 'a' and local_77 seems to be 1
+`byte ptr [RAX + local_77],0x61` -- in this case 0x61 is 'a' and local_77 seems to be 1
 so now we have `P@ssword` -> `Password`
 
 ![local_password](https://github.com/Sara0x62/Writeups/assets/83826811/5a62141a-17f3-44b7-bd1b-f1c7d6f20bec)
