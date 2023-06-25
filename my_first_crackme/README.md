@@ -24,6 +24,7 @@ and it was
 
 Okay, lets try to understand what it's doing then; opening it in Ghidra
 The decompiled code.. that looks very complicated and i don't understand this at all xD
+
 ![decompiled](https://github.com/Sara0x62/Writeups/assets/83826811/4fca8404-f761-49c7-a1b3-3b55bef1452f)
 
 ### Mhm... lets see if we can find something i do know 
