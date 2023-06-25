@@ -34,7 +34,7 @@ Aha, i can understand this part
 some more readable code here; a strncpy call, puts, fgets for our user input and strcmp to compare the passwords
 
 This line in particular caught my eye- i have renamed the variables in the screenshots but
-`line 46: local_58[1] = 'a';`
+`line 46: local_password[1] = 'a';`
 
 The C code is again a little confused but the assembly we can see pretty clearly it seems to load the password here
 and then edit a letter!
@@ -54,7 +54,7 @@ but this all basically comes down to
 fgets(local_48, local_58, stdin);
 local_54 = strcmp(local_48, local_password);
 ```
-and from the part earlier; we know `local_58`= `password`after the edit
+and from the part earlier; we know `local_password`= `password`after the edit
 
 ![try2](https://github.com/Sara0x62/Writeups/assets/83826811/e4c4be5c-09d8-4239-b5e3-9e2dde152a1f)
 
