@@ -78,7 +78,7 @@ Finally we have this block; the dissassmbly made our if statement look quite unr
 ```
 Cleaned up the if statement basically comes down to something like this
 ```c
-if ( ( abStack_28[loop2_cntr] ^ argv[loop2_cntr] ) != local_88[loop2_cntr]) { ... }
+if ( ( abStack_28[loop2_cntr] ^ argv[1][loop2_cntr] ) != local_88[loop2_cntr]) { ... }
 ```
 so, it loads our key, with each character having 0x22 subtracted
 It then loads all those other values and finally does a XOR check;
