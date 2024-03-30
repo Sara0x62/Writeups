@@ -19,13 +19,17 @@ What is the hidden directory?
 
 Okay, so let's start our basic recon
 first off with a standard "aggressive" **NMAP** using: `nmap -A -T4 10.10.1.26`
+
 ![](../attachments/ea0951982dbb7e6174934e0fe4120ffc.png)
+
 hmm this should already answer our first 3 questions:
 We got 2 ports open, port 80 is running Apache/2.4.29 and port 22 is running an **SSH** service.
 
 now we'll run a standard **gobuster** with a default wordlist in `dir` mode
 `gobuster dir -u 10.10.1.26 -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt`
+
 ![](../attachments/5f3cad0e6b72d2557c09d6f18187e915.png)
+
 and we found something already, `/panel`
 
 ---
