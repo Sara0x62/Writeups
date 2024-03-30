@@ -60,6 +60,7 @@ Results seem to say it was a success! and we can see the URL where it is availab
 
 Before we open that we should set up our netcat to listen for connections
 `nc -nlvp 1235`
+
 ![](../attachments/a4e721c6251aca6b5cb8005081fae710.png)
 
 and after opening the file through the browser we got our shell!
