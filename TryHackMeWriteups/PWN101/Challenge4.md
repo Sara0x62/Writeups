@@ -14,7 +14,7 @@ The code is basically calling
 So we attempt to read up to 200 bytes from *stdin* into the buffer, starting at `buf`
 Completely overwriting our buffer and anything past it!
 
-Testing buffer overflow size we end up at 80 (as expected from the code above giving us 0x50 (80))
+Testing buffer overflow size we end up at 80 (as expected from the code above giving us `0x50` (80))
 
 ![](attachments/b5434cd15f15a9dddea075260a58856f.png)
 
@@ -29,8 +29,10 @@ As seen here in the code, `[buf]` being the buffer for our input of size `0x50` 
 
 ![](attachments/a1a007161ea3321b0dfa0b30321ae2f9.png)
 
-So we'll write our shellcode to our buffer, then overflow the buffer to overwrite our RIP and redirect it to the address so it runs our input.
-After trying some publicly available ones and the built in pwn-tools shell code without luck, I ended up on this: https://www.exploit-db.com/exploits/46907 -
+So we'll write our shellcode to our buffer, then overflow the buffer to overwrite our **RBP** and more importantly, our **RIP**'s return address on the stack, and replace that with the address pointing to our shellcode.
+So our full exploit would be: `[Shellcode + fill leftover bufferspace + new RBP + new RIP]`
+
+For our shellcode I was looking at some publicly available ones and the built in pwn-tools shell code without luck until I came across this one: https://www.exploit-db.com/exploits/46907 -
 
 ```assembly
 global _start
@@ -65,7 +67,6 @@ RDX: 0x0000000000000000
 **Syscall 59**
 
 ![](attachments/161a8f3ae54b55ef9fbde3e0e4a2997a.png)
-
 ### Exploit script
 
 ```python
