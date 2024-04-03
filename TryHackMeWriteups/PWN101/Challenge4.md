@@ -65,6 +65,7 @@ RDX: 0x0000000000000000
 ```
 
 **Syscall 59**
+https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/
 
 ![](attachments/161a8f3ae54b55ef9fbde3e0e4a2997a.png)
 ### Exploit script
